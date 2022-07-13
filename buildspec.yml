@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Build"
+      - echo "Entered build phase"
+      - mvn clean package
+  post_build:
+    commands:
+      - echo "Post_build"
+artifacts:
+  files:
+      - target/transaction-ms.jar
+  discard-paths: yes
